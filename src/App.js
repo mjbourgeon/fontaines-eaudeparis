@@ -44,8 +44,8 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h3>Fontaines - Paris</h3>
+      <header className="header">
+        <h4>Fontaines - Eau de Paris</h4>
       </header>
       <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} ref={setMap}>
         <>
@@ -81,6 +81,13 @@ function App() {
           }
         </>
       </MapContainer>
+      <footer className="footer">
+        <p>Attributions</p>
+        <ul>
+          <li><a href="https://opendata.paris.fr/explore/dataset/fontaines-a-boire/information/?disjunctive.type_objet&disjunctive.modele&disjunctive.commune&disjunctive.dispo" title="Paris Data" rel="noreferrer noopener" target="_blank">Fontaines à boire - Paris Data</a></li>
+          <li><a href="https://www.flaticon.com/free-icons/raindrop" title="raindrop icons" rel="noreferrer noopener" target="_blank">Raindrop icons created by Icongeek26 - Flaticon</a></li>
+        </ul>
+      </footer>
     </div>
   );
 }

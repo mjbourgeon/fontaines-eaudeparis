@@ -37,7 +37,33 @@
   }
 }
 
+.header {
+  background-color: #81aafd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  height: 5vh;
+}
+
 .leaflet-container {
-  width: 100%;
-  height: 90vh;
+  width: 95%;
+  height: 85vh;
+  margin: 0 auto;
+}
+
+a {
+  color: #eeeeee;
+}
+
+.footer {
+  background-color: #81aafd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 10vh;
 }
