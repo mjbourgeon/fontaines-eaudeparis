@@ -8,6 +8,10 @@
     height: 40vh;
 }
 
+.home-header .imagelogo {
+    height: 30%;
+}
+
 .home-main {
     height: 45vh;
     background-color:honeydew;
@@ -15,10 +19,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
 
-    a {
-        color: #000000;
-    }
+.home-main .infomessage {
+    color: #3c7dff;
+    text-decoration: none;
+}
+
+.home-main .actionButton {
+    background-color: #81aafd;
+    color: antiquewhite;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: large;
+    padding: 15px;
+    line-height: 2;
+    cursor: grab;
 }
 
 .home-footer {
@@ -29,4 +49,9 @@
     justify-content: center;
     color: white;
     height: 15vh;
+}
+
+.home-footer a {
+    color: white;
+    text-decoration: none;
 }
