@@ -1,8 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NotFound() {
     return (
-        <h1>404</h1>
+        <div>
+            <h1>404</h1>
+            <p>No water found.</p>
+            <p>Try starting back from <Link to="/">there</Link>.</p>
+        </div>
     );
 }
 
