@@ -9,7 +9,7 @@ function Home() {
     useEffect(() => {
         var options = {
             enableHighAccuracy: true,
-            timeout: 3000,
+            timeout: 10000,
             maximumAge: 0
         };
         navigator.geolocation.getCurrentPosition(
