@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     padding: 50px;
-    height: 100%;
+    min-height: 68vh;
 }
 
 .about-main section {
@@ -27,8 +27,6 @@
     justify-content: center;
     color: white;
     height: 10vh;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 

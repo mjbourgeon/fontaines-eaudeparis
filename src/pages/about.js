@@ -16,7 +16,10 @@ function About() {
                         This site is developed as a self assignment to learn using React, Leaflet and deploying on Vercel.
                     </p>
                     <p>
-                        The full code is on my <a href="https://github.com/mjbourgeon/fontaines-eaudeparis" rel="noopener" target="_blank">Github</a>. Please fork or contribute.
+                        The full code is on my <a href="https://github.com/mjbourgeon/fontaines-eaudeparis" rel="noopener" target="_blank">Github</a>.
+                    </p>
+                    <p>
+                        This repository is not actively maintained. Please fork or contribute if you wish to enhance it or fix issues.
                     </p>
                 </section>
                 <section>
@@ -24,6 +27,9 @@ function About() {
                     <h3>Data</h3>
                     <p>
                         <a href="https://opendata.paris.fr/explore/dataset/fontaines-a-boire/information/?disjunctive.type_objet&disjunctive.modele&disjunctive.commune&disjunctive.dispo" title="Paris Data" rel="noreferrer noopener" target="_blank">Fontaines à boire - Paris Data</a>
+                    </p>
+                    <p>
+                        A complete map of all <a href="https://www.eaudeparis.fr/ou-trouver-de-leau-paris" target="_blank" rel="noopener noreferrer">potable water</a> spots is available on the <a href="https://fontaine.eaudeparis.fr/" rel="noopener noreferrer" target="_blank">here</a>.
                     </p>
                     <h3>Tools</h3>
                     <p>

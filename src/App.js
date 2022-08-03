@@ -6,6 +6,7 @@ import 'leaflet-defaulticon-compatibility';
 import React, { useState, useEffect, useRef } from 'react';
 
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
+import { Link } from 'react-router-dom';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             },
             (error) => {
               console.log(error);
+              alert("Unable to fetch water spots using Paris Data API.");
             }
           )
       });
@@ -45,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <h4>Fontaines - Eau de Paris</h4>
+        <h5>🚰 Eau à Paris ⛲</h5>
       </header>
       <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} ref={setMap}>
         <>
@@ -82,11 +84,7 @@ function App() {
         </>
       </MapContainer>
       <footer className="footer">
-        <p>Attributions</p>
-        <ul>
-          <li><a href="https://opendata.paris.fr/explore/dataset/fontaines-a-boire/information/?disjunctive.type_objet&disjunctive.modele&disjunctive.commune&disjunctive.dispo" title="Paris Data" rel="noreferrer noopener" target="_blank">Fontaines à boire - Paris Data</a></li>
-          <li><a href="https://www.flaticon.com/free-icons/raindrop" title="raindrop icons" rel="noreferrer noopener" target="_blank">Raindrop icons created by Icongeek26 - Flaticon</a></li>
-        </ul>
+        <Link to="/about">About</Link> <Link to="/">Back to home</Link>
       </footer>
     </div>
   );
