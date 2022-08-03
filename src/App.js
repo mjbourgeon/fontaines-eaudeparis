@@ -10,9 +10,10 @@ import { Link } from 'react-router-dom';
 
 
 function App() {
+  const DEFAULT_CENTER = [48.858470, 2.338075];
   const groupRef = useRef();
   const [map, setMap] = useState(null);
-  const [knowLocation, setKnownLocation] = useState([51.505, -0.09]);
+  const [knowLocation, setKnownLocation] = useState(DEFAULT_CENTER);
   const [records, setRecords] = useState([]);
 
   const redOptions = { color: 'red' };
@@ -49,7 +50,7 @@ function App() {
       <header className="header">
         <h5>🚰 Eau à Paris ⛲</h5>
       </header>
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} ref={setMap}>
+      <MapContainer center={DEFAULT_CENTER} zoom={13} scrollWheelZoom={false} ref={setMap}>
         <>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
