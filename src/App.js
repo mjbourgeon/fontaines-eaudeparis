@@ -56,17 +56,19 @@ function App() {
           <Circle center={knowLocation} pathOptions={redOptions} radius={20} />
 
           {
-            records.map((record, idx) =>
-              <Marker key={`marker-${idx}`} position={[record.geometry.coordinates[1], record.geometry.coordinates[0]]}>
-                <Popup>
-                  <span>
-                    <p><a href={`https://www.google.com/maps/dir/?api=1&travelmode=walking&layer=traffic&destination=${record.geometry.coordinates[1]},${record.geometry.coordinates[0]}`} target="_blank" rel="noopener noreferrer">{`${record.recordid}`}</a></p>
-                    <p>{`${record.geometry.coordinates[1]} ${record.geometry.coordinates[0]}`}</p>
-                    <p>{`${(record.fields.no_voirie_pair === undefined ? "" : record.fields.no_voirie_pair)} ${record.fields.voie} ${record.fields.commune}`}</p>
-                  </span>
-                </Popup>
-              </Marker>
-            )
+            records
+              .filter(record => record.fields.dispo === "OUI")
+              .map((record, idx) =>
+                <Marker key={`marker-${idx}`} position={[record.geometry.coordinates[1], record.geometry.coordinates[0]]}>
+                  <Popup>
+                    <span>
+                      <p><a href={`https://www.google.com/maps/dir/?api=1&travelmode=walking&layer=traffic&destination=${record.geometry.coordinates[1]},${record.geometry.coordinates[0]}`} target="_blank" rel="noopener noreferrer">{`${record.recordid}`}</a></p>
+                      <p>{`${record.geometry.coordinates[1]} ${record.geometry.coordinates[0]}`}</p>
+                      <p>{`${(record.fields.no_voirie_pair === undefined ? "" : record.fields.no_voirie_pair)} ${record.fields.voie} ${record.fields.commune}`}</p>
+                    </span>
+                  </Popup>
+                </Marker>
+              )
           }
         </>
       </MapContainer>
