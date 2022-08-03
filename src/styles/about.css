@@ -1,0 +1,36 @@
+.about-header {
+    background-color: #81aafd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 20vh;
+}
+
+.about-main {
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    min-height: 68vh;
+}
+
+.about-main section {
+    padding: 10px;
+}
+
+.about-footer {
+    background-color: #81aafd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 10vh;
+    width: 100%;
+}
+
+.about-footer a {
+    color: white;
+    text-decoration: none;
+}
