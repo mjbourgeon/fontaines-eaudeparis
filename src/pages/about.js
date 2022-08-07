@@ -11,15 +11,25 @@ function About() {
             </header>
             <main className="about-main">
                 <section>
+                    <h2>How</h2>
+                    <p>
+                        Get the potable water fountains around you in a radius of 1km in the Paris area.
+                    </p>
+                    <p>
+                        Your location is required for the service to work correctly.
+                        <br/>
+                        In case you cannot or do not want to enable the location service you should try using the full map of potable water foutains available<a href="https://fontaine.eaudeparis.fr/" rel="noopener noreferrer" target="_blank">here</a>.
+                    </p>
+                </section>
+                <section>
                     <h2>Why</h2>
                     <p>
-                        This site is developed as a self assignment to learn using React, Leaflet and deploying on Vercel.
+                        This site is developed as a self assignment to learn using Leaflet with React and deploying on Vercel.
                     </p>
                     <p>
-                        The full code is on my <a href="https://github.com/mjbourgeon/fontaines-eaudeparis" rel="noopener" target="_blank">Github</a>.
-                    </p>
-                    <p>
-                        This repository is not actively maintained. Please fork or contribute if you wish to enhance it or fix issues.
+                        The full code is on my <a href="https://github.com/mjbourgeon/fontaines-eaudeparis" rel="noopener noreferrer" target="_blank">Github</a>.
+                        <br/>
+                        This repository is not actively maintained. Please fork to contribute.
                     </p>
                 </section>
                 <section>
@@ -27,9 +37,6 @@ function About() {
                     <h3>Data</h3>
                     <p>
                         <a href="https://opendata.paris.fr/explore/dataset/fontaines-a-boire/information/?disjunctive.type_objet&disjunctive.modele&disjunctive.commune&disjunctive.dispo" title="Paris Data" rel="noreferrer noopener" target="_blank">Fontaines à boire - Paris Data</a>
-                    </p>
-                    <p>
-                        A complete map of all <a href="https://www.eaudeparis.fr/ou-trouver-de-leau-paris" target="_blank" rel="noopener noreferrer">potable water</a> spots is available on the <a href="https://fontaine.eaudeparis.fr/" rel="noopener noreferrer" target="_blank">here</a>.
                     </p>
                     <h3>Tools</h3>
                     <p>
