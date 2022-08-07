@@ -41,7 +41,7 @@ function Home() {
             </header>
             <main className="home-main">
                 { locationPending ? <p className="infomessage">Checking browser location availability...</p> : null }
-                { !locationPending && !locationEnabled ? <p className="infomessage">Please enable browse location to use this page.</p> : null }
+                { !locationPending && !locationEnabled ? <p className="infomessage">Please enable the location service to use this page.</p> : null }
                 { !locationPending && locationEnabled ? <Link to="/app"><button className="actionButton">🚰<br/>Take me to the water...<br/>💦</button></Link> : null }
             </main>
             <Footer/>
