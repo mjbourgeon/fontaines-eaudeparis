@@ -1,15 +1,5 @@
-.about-header {
-    background-color: #81aafd;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
 .about-main {
-    align-items: center;
-    justify-content: center;
+    display: block;
     padding: 50px;
 }
 
