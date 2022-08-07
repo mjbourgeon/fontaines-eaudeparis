@@ -18,7 +18,7 @@ function About() {
                     <p>
                         Your location is required for the service to work correctly.
                         <br/>
-                        In case you cannot or do not want to enable the location service you should try using the full map of potable water foutains available<a href="https://fontaine.eaudeparis.fr/" rel="noopener noreferrer" target="_blank">here</a>.
+                        In case you cannot or do not want to enable the location service you should try using the full map of potable water foutains available <a href="https://fontaine.eaudeparis.fr/" rel="noopener noreferrer" target="_blank">here</a>.
                     </p>
                 </section>
                 <section>
