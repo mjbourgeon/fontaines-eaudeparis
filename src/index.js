@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./pages/home";
 import About from "./pages/about";
 import NotFound from "./pages/404";
-import App from "./App.js";
+import App from "./pages/app.js";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

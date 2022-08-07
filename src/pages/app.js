@@ -1,4 +1,4 @@
-import './App.css';
+import '../styles/app.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import 'leaflet-defaulticon-compatibility';
@@ -7,6 +7,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import { Link } from 'react-router-dom';
+import Footer from '../components/footer';
 
 
 function App() {
@@ -46,48 +47,48 @@ function App() {
   }, [map, groupRef]);
 
   return (
-    <div className="App">
+    <>
       <header className="header">
         <h5>🚰 Eau à Paris ⛲</h5>
       </header>
-      <MapContainer center={DEFAULT_CENTER} zoom={13} scrollWheelZoom={false} ref={setMap}>
-        <>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Circle center={knowLocation} pathOptions={redOptions} radius={20} />
+      <main>
+        <MapContainer center={DEFAULT_CENTER} zoom={13} scrollWheelZoom={false} ref={setMap}>
+          <>
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Circle center={knowLocation} pathOptions={redOptions} radius={20} />
 
-          {
-            records
-              .filter(record => record.fields.dispo === "OUI")
-              .map((record, idx) =>
-                <Marker key={`marker-${idx}`} position={[record.geometry.coordinates[1], record.geometry.coordinates[0]]}>
-                  <Popup>
-                    <span>
-                      <p>
-                        {`${record.fields.modele}`}
-                      </p>
-                      <p>
-                        <a
-                          href={`https://www.google.com/maps/dir/?api=1&travelmode=walking&layer=traffic&destination=${record.geometry.coordinates[1]},${record.geometry.coordinates[0]}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {`${(record.fields.no_voirie_pair === undefined ? "" : record.fields.no_voirie_pair)} ${record.fields.voie} ${record.fields.commune}`}
-                        </a>
-                      </p>
-                    </span>
-                  </Popup>
-                </Marker>
-              )
-          }
-        </>
-      </MapContainer>
-      <footer className="footer">
-        <Link to="/about">About</Link> <Link to="/">Back to home</Link>
-      </footer>
-    </div>
+            {
+              records
+                .filter(record => record.fields.dispo === "OUI")
+                .map((record, idx) =>
+                  <Marker key={`marker-${idx}`} position={[record.geometry.coordinates[1], record.geometry.coordinates[0]]}>
+                    <Popup>
+                      <span>
+                        <p>
+                          {`${record.fields.modele}`}
+                        </p>
+                        <p>
+                          <a
+                            href={`https://www.google.com/maps/dir/?api=1&travelmode=walking&layer=traffic&destination=${record.geometry.coordinates[1]},${record.geometry.coordinates[0]}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {`${(record.fields.no_voirie_pair === undefined ? "" : record.fields.no_voirie_pair)} ${record.fields.voie} ${record.fields.commune}`}
+                          </a>
+                        </p>
+                      </span>
+                    </Popup>
+                  </Marker>
+                )
+            }
+          </>
+        </MapContainer>
+      </main>
+      <Footer/>
+    </>
   );
 }
 

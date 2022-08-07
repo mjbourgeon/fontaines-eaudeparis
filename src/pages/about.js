@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Footer from "../components/footer";
 
 import '../styles/about.css';
 
 function About() {
     return (
-        <div>
+        <>
             <header className="about-header">
                 <h1>About</h1>
             </header>
@@ -47,10 +47,8 @@ function About() {
                     </p>
                 </section>
             </main>
-            <footer className="about-footer">
-                <Link to="/">Back to home</Link>
-            </footer>
-        </div>
+            <Footer/>
+        </>
     );
 }
 
