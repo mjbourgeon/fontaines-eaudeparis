@@ -6,7 +6,6 @@ import 'leaflet-defaulticon-compatibility';
 import React, { useState, useEffect, useRef } from 'react';
 
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
-import { Link } from 'react-router-dom';
 import Footer from '../components/footer';
 
 
@@ -55,8 +54,8 @@ function App() {
         <MapContainer center={DEFAULT_CENTER} zoom={13} scrollWheelZoom={false} ref={setMap}>
           <>
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+              url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
             />
             <Circle center={knowLocation} pathOptions={redOptions} radius={20} />
 
